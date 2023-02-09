@@ -13,6 +13,7 @@ public class BubbleSort {
         return a;
     }
     
+    // Writing the array to a file.
     public static void writeArrayToFile(int[] array, String filename){
         try (FileWriter fileWriter = new FileWriter(filename)){
             for (int i=0; i < array.length; i++){
@@ -23,6 +24,7 @@ public class BubbleSort {
         }
     }
 
+    // Reading the array from the file name mentioned.
     public static int[] readFileToArray(String filename){
         ArrayList<Integer> arrayList = new ArrayList();
         try {
@@ -44,12 +46,14 @@ public class BubbleSort {
         return array;
     }
 
+    // Swapping two consecutive integers following a<b.
     public static void swap(int[] array, int i, int j){
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }
 
+    // Bubble sort code
     public static void bubbleSort(int[] array){
         for (int j = array.length - 1; j >= 1; j--){
             for (int i=0; i < j; i++){
@@ -60,6 +64,7 @@ public class BubbleSort {
         }
     }
 
+    // checking whether the array is sorted and returning a true or false value.
     public static boolean isSorted(int[] array){
         for (int i=0; i < array.length - 1; i++){
             if (array[i] > array[i + 1])
